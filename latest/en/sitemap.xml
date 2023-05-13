@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/2-features/auto-configuration-as-default-dns/</loc>
+  </url>
+  
+  <url>
     <loc>http://mageddo.github.io/dns-proxy-server/latest/en/1-getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/1-getting-started/running-it/linux/</loc>
+  </url>
+  
+  <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/1-getting-started/running-it/mac/</loc>
   </url>
   
   <url>
@@ -12,6 +24,10 @@
   
   <url>
     <loc>http://mageddo.github.io/dns-proxy-server/latest/en/api/v1/networks/</loc>
+  </url>
+  
+  <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/1-getting-started/running-it/windows/</loc>
   </url>
   
   <url>
@@ -35,11 +51,23 @@
   </url>
   
   <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/2-features/docker-different-networks-solving/</loc>
+  </url>
+  
+  <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/1-getting-started/versioning/</loc>
+  </url>
+  
+  <url>
     <loc>http://mageddo.github.io/dns-proxy-server/latest/en/2-features/solving-hostnames-wildcard/</loc>
   </url>
   
   <url>
-    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/4-compiling/</loc>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/4-developing/compiling/</loc>
+  </url>
+  
+  <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/5-tutorials/</loc>
   </url>
   
   <url>
@@ -47,15 +75,7 @@
   </url>
   
   <url>
-    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/5-developing/</loc>
-  </url>
-  
-  <url>
-    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/6-generating-docs/</loc>
-  </url>
-  
-  <url>
-    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/2-features/solving-host-machine-ip/</loc>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/4-developing/</loc>
   </url>
   
   <url>
@@ -63,15 +83,23 @@
   </url>
   
   <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/4-developing/generating-docs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/2-features/solving-host-machine-ip/</loc>
+  </url>
+  
+  <url>
     <loc>http://mageddo.github.io/dns-proxy-server/latest/en/2-features/accessing-container-by-name/</loc>
   </url>
   
   <url>
-    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/2-features/specify-from-which-network-solve-container/</loc>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/versions/</loc>
   </url>
   
   <url>
-    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/versions/</loc>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/2-features/specify-from-which-network-solve-container/</loc>
   </url>
   
   <url>
@@ -98,6 +126,10 @@
   </url>
   
   <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/5-tutorials/docker-reverse-proxy/</loc>
+  </url>
+  
+  <url>
     <loc>http://mageddo.github.io/dns-proxy-server/latest/en/credits/</loc>
   </url>
   
@@ -113,6 +145,10 @@
                 hreflang="en"
                 href="http://mageddo.github.io/dns-proxy-server/latest/en/"
                 />
+  </url>
+  
+  <url>
+    <loc>http://mageddo.github.io/dns-proxy-server/latest/en/2-features/local-entries/</loc>
   </url>
   
   <url>
