@@ -4,13 +4,11 @@
   "dockerSolverHostMachineFallbackActive" : true,
   "domain" : "docker",
   "dpsNetworkAutoConnect" : false,
-  "helpCmd" : false,
   "hostMachineHostname" : "host.docker",
   "logFile" : "console",
   "logLevel" : "INFO",
   "mustConfigureDpsNetwork" : false,
   "noEntriesResponseCode" : 3,
-  "noRemoteServers" : false,
   "registerContainerNames" : false,
   "remoteDnsServers" : [ {
     "ip" : "8.8.8.8",
@@ -20,6 +18,7 @@
   "resolvConfOverrideNameServers" : true,
   "serverProtocol" : "UDP_TCP",
   "solverRemote" : {
+    "active" : true,
     "circuitBreaker" : {
       "failureThreshold" : 3,
       "failureThresholdCapacity" : 10,
@@ -27,6 +26,5 @@
       "testDelay" : 20.0
     }
   },
-  "versionCmd" : false,
   "webServerPort" : 5380
 }

@@ -1,3 +1,47 @@
+## 3.22.0 
+* #473: Qemu upgrade
+
+## 3.21.3
+* #496: Fixing aarch binary not building 
+
+## 3.21.2
+* #285, #494: Fixing amd64 static docker image.
+* #435: Make DPS dynamic linked binary compatible with libgc 2.15 again
+
+## 3.21.1
+* #435: Upgrading docker run images due glibc
+* #285: Linux AMD64 static binary
+
+## 3.20.0
+* #435: GraalVM Upgrade to 21 LTS
+
+## 3.19.7
+* #427, #481: Hotfix for ipv6 address represented with subnet mask
+
+## 3.19.6
+* #465: DnsConfigurators: checking docker connection
+
+## 3.19.5
+* #474: Fixing errors log occurs when fallback to host machine IP.
+
+## 3.19.4
+* #476: Fixing invalid IP parsing usecase
+
+## 3.19.3
+* #471: Fixing Help/Version Command Not Working Properly
+
+## 3.19.2
+* Config module domain refactoring, see #470
+
+## 3.19.1
+* Resources usage optimization identified at #455
+
+## 3.19.0
+* Remote Server Solver Cache Consistency Guarantee, see #455.
+
+## 3.18.5
+* Refactor `SolverRemote` module, see #460.
+
 ## 3.18.4
 * Refactor `SolverRemote` solver class, see #459.
 

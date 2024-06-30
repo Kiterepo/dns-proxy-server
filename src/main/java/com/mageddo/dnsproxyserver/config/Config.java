@@ -1,5 +1,6 @@
 package com.mageddo.dnsproxyserver.config;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mageddo.dnsserver.SimpleServer;
 import com.mageddo.net.IP;
 import com.mageddo.net.IpAddr;
@@ -25,7 +26,6 @@ import java.util.stream.Stream;
 import static com.mageddo.commons.lang.Objects.mapOrNull;
 
 /**
- *
  * @see com.mageddo.dnsproxyserver.config.application.ConfigService
  */
 @Value
@@ -67,17 +67,19 @@ public class Config {
 
   private Boolean resolvConfOverrideNameServers;
 
-  private Boolean noRemoteServers;
-
   private Integer noEntriesResponseCode;
 
   private Boolean dockerSolverHostMachineFallbackActive;
 
-  private boolean helpCmd;
-
-  private boolean versionCmd;
-
   private SolverRemote solverRemote;
+
+  @JsonIgnore
+  public Boolean isSolverRemoteActive() {
+    if (this.solverRemote == null) {
+      return null;
+    }
+    return this.solverRemote.getActive();
+  }
 
   public void resetConfigFile() {
     try {
@@ -85,6 +87,14 @@ public class Config {
     } catch (IOException e) {
       throw new UncheckedIOException(e);
     }
+  }
+
+  @JsonIgnore
+  public CircuitBreaker getSolverRemoteCircuitBreaker() {
+    if (this.solverRemote == null) {
+      return null;
+    }
+    return this.solverRemote.getCircuitBreaker();
   }
 
   @Value

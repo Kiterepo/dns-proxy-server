@@ -4,18 +4,17 @@
   "dockerSolverHostMachineFallbackActive" : null,
   "domain" : "acme",
   "dpsNetworkAutoConnect" : true,
-  "helpCmd" : false,
   "hostMachineHostname" : "batata.com",
   "logFile" : "/var/log/dns-proxy-server.log",
   "logLevel" : "DEBUG",
   "mustConfigureDpsNetwork" : true,
   "noEntriesResponseCode" : null,
-  "noRemoteServers" : null,
   "registerContainerNames" : true,
   "remoteDnsServers" : [ ],
   "resolvConfOverrideNameServers" : null,
   "serverProtocol" : null,
   "solverRemote" : {
+    "active" : null,
     "circuitBreaker" : {
       "failureThreshold" : 3,
       "failureThresholdCapacity" : 10,
@@ -23,6 +22,5 @@
       "testDelay" : 60.0
     }
   },
-  "versionCmd" : false,
   "webServerPort" : 9393
 }

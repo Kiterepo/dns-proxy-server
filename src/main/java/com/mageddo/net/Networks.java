@@ -46,7 +46,7 @@ public class Networks {
       .stream()
       .sorted(Comparator.comparingInt(NetworkInterface::getIndex))
       .flatMap(NetworkInterface::inetAddresses)
-      .map(it -> IP.of(it.getHostAddress()))
+      .map(it -> IP.of(it.getAddress()))
       .toList()
       ;
   }
@@ -114,13 +114,17 @@ public class Networks {
     }
   }
 
-  public static boolean ping(InetAddress address, int port, int timeout) {
+  public static boolean ping(InetSocketAddress address, int timeout) {
     try (var socket = new Socket()) {
-      socket.connect(new InetSocketAddress(address, port), timeout);
+      socket.connect(address, timeout);
       return true;
     } catch (Exception e) {
       return false;
     }
+  }
+
+  public static boolean ping(InetAddress address, int port, int timeout) {
+    return ping(new InetSocketAddress(address, port), timeout);
   }
 
 }

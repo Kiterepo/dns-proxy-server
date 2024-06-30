@@ -17,6 +17,7 @@
   "domain" : "docker",
   "dpsNetwork" : false,
   "dpsNetworkAutoConnect" : false,
-  "help" : null,
-  "resolvConfOverrideNameServers" : true
+  "help" : false,
+  "resolvConfOverrideNameServers" : true,
+  "createTmpDir" : false
 }

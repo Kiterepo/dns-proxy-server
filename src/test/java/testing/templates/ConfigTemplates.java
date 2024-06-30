@@ -2,12 +2,14 @@ package testing.templates;
 
 import com.mageddo.dnsproxyserver.config.Config;
 import com.mageddo.dnsproxyserver.config.LogLevel;
+import com.mageddo.dnsproxyserver.config.SolverRemote;
 import com.mageddo.dnsproxyserver.config.dataprovider.vo.ConfigEnv;
 import com.mageddo.dnsserver.SimpleServer;
 
 import java.nio.file.Paths;
 
 public class ConfigTemplates {
+
   public static Config defaultWithoutId() {
     return defaultBuilder()
       .build();
@@ -31,7 +33,11 @@ public class ConfigTemplates {
       .resolvConfPaths(ConfigEnv.DEFAULT_RESOLV_CONF_PATH)
       .serverProtocol(SimpleServer.Protocol.UDP_TCP)
       .resolvConfOverrideNameServers(true)
-      .noRemoteServers(false)
+      .solverRemote(SolverRemote
+        .builder()
+        .active(true)
+        .build()
+      )
       .noEntriesResponseCode(3)
       .dockerSolverHostMachineFallbackActive(true)
       ;
@@ -41,6 +47,16 @@ public class ConfigTemplates {
   public static Config withRegisterContainerNames() {
     return defaultBuilder()
       .registerContainerNames(true)
+      .build();
+  }
+
+  public static Config withSolverRemoteDisabled() {
+    return defaultBuilder()
+      .solverRemote(SolverRemote
+        .builder()
+        .active(false)
+        .build()
+      )
       .build();
   }
 }

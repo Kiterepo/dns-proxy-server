@@ -15,6 +15,7 @@ import com.mageddo.dnsproxyserver.server.Starter;
 import com.mageddo.dnsproxyserver.solver.Solver;
 import com.mageddo.dnsproxyserver.solver.docker.application.ContainerSolvingService;
 import com.mageddo.dnsproxyserver.solver.docker.dataprovider.DockerDAO;
+import com.mageddo.dnsproxyserver.solver.remote.configurator.SolverRemoteModule;
 import dagger.Component;
 import jdk.jfr.Name;
 import org.apache.commons.lang3.Validate;
@@ -36,7 +37,8 @@ import java.util.Set;
   ModuleSolver.class,
   ModuleStartup.class,
   ModuleMap.class,
-  ModuleConfigDAO.class
+  ModuleConfigDAO.class,
+  SolverRemoteModule.class
 })
 public interface Context {
 
@@ -51,7 +53,6 @@ public interface Context {
   Set<StartupEvent> events();
 
   default void start() {
-    this.events().forEach(StartupEvent::onStart);
     this.starter().start();
   }
 

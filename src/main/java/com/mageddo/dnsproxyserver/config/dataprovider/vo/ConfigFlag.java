@@ -172,7 +172,7 @@ public class ConfigFlag implements Callable<Boolean> {
     description = "This message (default false)",
     usageHelp = true
   )
-  private Boolean help;
+  private boolean help;
 
   @Option(
     names = {"-docker-solver-host-machine-fallback", "--docker-solver-host-machine-fallback"},
@@ -183,6 +183,13 @@ public class ConfigFlag implements Callable<Boolean> {
     defaultValue = "true"
   )
   private Boolean dockerSolverHostMachineFallbackActive;
+
+  @Option(
+    hidden = true,
+    names = {"-create-tmp-dir", "--create-tmp-dir"}, defaultValue = "false",
+    description = "Create the dir set as tmp in the jvm if it doesn't exists yet."
+  )
+  private boolean createTmpDir;
 
   @JsonIgnore
   private String[] args;

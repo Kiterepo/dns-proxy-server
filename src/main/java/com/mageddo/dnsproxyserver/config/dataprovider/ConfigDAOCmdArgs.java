@@ -1,9 +1,8 @@
 package com.mageddo.dnsproxyserver.config.dataprovider;
 
 import com.mageddo.dnsproxyserver.config.Config;
-import com.mageddo.dnsproxyserver.config.dataprovider.mapper.ConfigFieldsValuesMapper;
+import com.mageddo.dnsproxyserver.config.dataprovider.mapper.ConfigFlagMapper;
 import com.mageddo.dnsproxyserver.config.dataprovider.vo.ConfigFlag;
-import com.mageddo.utils.Files;
 import lombok.RequiredArgsConstructor;
 
 import javax.inject.Inject;
@@ -17,7 +16,7 @@ public class ConfigDAOCmdArgs implements ConfigDAO {
 
   @Override
   public Config find() {
-    return toConfig(this.findRaw());
+    return ConfigFlagMapper.toConfig(this.findRaw());
   }
 
   public ConfigFlag findRaw() {
@@ -31,27 +30,6 @@ public class ConfigDAOCmdArgs implements ConfigDAO {
 
   public static void setArgs(String[] args) {
     ConfigDAOCmdArgs.args = args;
-  }
-
-  static Config toConfig(ConfigFlag config) {
-    return Config.builder()
-      .configPath(Files.pathOf(config.getConfigPath()))
-      .registerContainerNames(config.getRegisterContainerNames())
-      .domain(config.getDomain())
-      .logFile(config.getLogToFile())
-      .logLevel(ConfigFieldsValuesMapper.mapLogLevelFrom(config.getLogLevel()))
-      .dockerHost(config.getDockerHost())
-      .hostMachineHostname(config.getHostMachineHostname())
-      .noRemoteServers(config.getNoRemoteServers())
-      .dpsNetworkAutoConnect(config.getDpsNetworkAutoConnect())
-      .noEntriesResponseCode(config.getNoEntriesResponseCode())
-      .dockerSolverHostMachineFallbackActive(config.getDockerSolverHostMachineFallbackActive())
-      .resolvConfOverrideNameServers(config.getResolvConfOverrideNameServers())
-      .mustConfigureDpsNetwork(config.getDpsNetwork())
-      .webServerPort(config.getWebServerPort())
-      .dnsServerPort(config.getDnsServerPort())
-      .defaultDns(config.getDefaultDns())
-      .build();
   }
 
   static String[] getArgs() {
